@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Danfo&family=Jersey+10&display=swap');
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --hue: 200;
+  --saturation: 50%;
+  --foreground-color: #fff;
+  --background-color:#fff;
+}
+
+body {
+  margin: 0;   
+   background-color : #141414;
+  overflow: hidden;
+}
+
+.paddle {
+  --position: 50;
+
+  position: absolute;
+  background-color: #fff;
+  top: calc(var(--position) * 1vh);
+  transform: translateY(-50%);
+  width: 1vh;
+  height: 10vh;
+
+}
+
+.paddle.left {
+  left: 1vw;
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;;
+
+}
+
+.paddle.right {
+  right: 1vw;
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #a74ac7, 0 0 20px #a74ac7, 0 0 25px #a74ac7, 0 0 30px #a74ac7, 0 0 35px #a74ac7;
+
+}
+
+.ball {
+  --x: 50;
+  --y: 50;
+
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;;
+  left: calc(var(--x) * 1vw);
+  top: calc(var(--y) * 1vh);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  width: 2.5vh;
+  height: 2.5vh;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 10vh;
+  color: var(--foreground-color);
+  font-family: "Jersey 10", sans-serif;
+  color: #ffffff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
+}
+
+.score > * {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 0 2vh;
+  margin: 1vh 0;
+  opacity: .5;
+}
+
+.score > :first-child {
+  text-align: right;
+  border-right: .5vh solid var(--foreground-color);
+}
+
+.header {
+  background-color: #141414;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.button {   
+   display: block;
+  margin-bottom: 5px;
+  font-size: 2rem;
+  font-family: "Jersey 10", sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #005fba, 0 0 20px #005fba, 0 0 25px #005fba, 0 0 30px #005fba, 0 0 35px #005fba;
+  box-sizing: border-box;
+}
+
+
+.button:hover {
+  color: #00ff1e;
+}

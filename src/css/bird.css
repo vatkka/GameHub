@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Danfo&family=Jersey+10&display=swap');
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #141414; 
+  color: white; 
+  font-family: "Jersey 10", sans-serif; 
+}
+
+.title {
+  z-index: 10;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+  margin: 0;
+  font-size: 120px;
+  flex-direction: column;
+  text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #0073e6, 0 0 8px #0073e6, 0 0 10px #0073e6, 0 0 12px #0073e6, 0 0 14px #0073e6; /* Smaller neon glow effect */
+}
+
+.subtitle {
+  margin-top: .5rem;
+  font-size: 60px; 
+}
+
+.hide {
+  display: none;
+}
+
+.bird {
+  --bird-top: -1000;
+  --bird-size: 50px; 
+  position: absolute;
+  background-color: hsl(50, 75%, 50%);
+  width: var(--bird-size);
+  height: var(--bird-size);
+  left: var(--bird-size);
+  top: calc(var(--bird-top) * 1px);
+  border-radius: 50%;
+  box-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #f39c12, 0 0 8px #f39c12, 0 0 10px #f39c12, 0 0 12px #f39c12, 0 0 14px #f39c12; /* Smaller neon glow effect */
+}
+
+.pipe {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: calc(var(--pipe-width) * 1px);
+  left: calc(var(--pipe-left) * 1px);
+}
+
+.pipe > .segment {
+  box-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #27ae60, 0 0 8px #27ae60, 0 0 10px #27ae60, 0 0 12px #27ae60, 0 0 14px #27ae60; /* Smaller neon glow effect */
+  
+  background-color: hsl(100, 75%, 50%);
+  position: absolute;
+  width: 100%;
+}
+
+.pipe > .top {
+  top: 0;
+  bottom: calc(var(--hole-top) * 1px);
+}
+
+.pipe > .bottom {
+  bottom: 0;
+  top: calc(100vh - (var(--hole-top) * 1px) + calc(var(--hole-height) * 1px));
+}
+
+#restartButton {
+  border: 1px solid #0073e6;
+  background: transparent;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1.5em; /* Larger button text */
+  cursor: pointer;
+  box-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #0073e6, 0 0 8px #0073e6, 0 0 10px #0073e6, 0 0 12px #0073e6, 0 0 14px #0073e6; /* Smaller neon glow effect */
+  transition: background 0.3s, color 0.3s;
+  margin-top: 20px;
+}
+
+#restartButton:hover {
+  background: #ffffff;
+  color: #000;
+}
+
+#restartButton:active {
+  box-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #0073e6, 0 0 8px #0073e6, 0 0 10px #0073e6, 0 0 12px #0073e6, 0 0 14px #0073e6; /* Smaller neon glow effect */
+}
+
+.data-winning-message-text {
+  font-size: 7rem; /* Much larger text size */
+  text-align: center;
+  font-family: "Jersey 10", sans-serif;
+  color: #ffffff;
+  text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #0073e6, 0 0 8px #0073e6, 0 0 10px #0073e6, 0 0 12px #0073e6, 0 0 14px #0073e6; /* Smaller neon glow effect */
+}
+
+
+.header {
+  background-color: #141414;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1px;
+}
+
+
+.button {   
+   display: block;
+  margin-bottom: 5px;
+  font-size: 2rem;
+  font-family: "Jersey 10", sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #005fba, 0 0 20px #005fba, 0 0 25px #005fba, 0 0 30px #005fba, 0 0 35px #005fba;
+  box-sizing: border-box;
+}
+
+
+.button:hover {
+  color: #00ff1e;
+}

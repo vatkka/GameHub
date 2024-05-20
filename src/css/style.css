@@ -1,0 +1,45 @@
+.ash {
+    height: 50px;
+    width: 50px;
+    border: solid thin black;
+    border-left-width: 0ch;
+    background-color: gray;
+    float: left;
+}
+.wrapper {
+    height: 50px;
+    width: auto;
+    border: solid thin black;
+    background-color: white;
+    float: left;
+}
+.filter {
+    height: 50px;
+    width: 150px;
+    border: solid thin black;
+    background-color: orange;
+    text-align: center ;
+    float: left;
+    vertical-align: middle;
+    line-height: 50px;
+    margin-right: 600px;
+}
+.wrapper_in {
+    height: 50px;
+    width: 150px;
+    border: solid thin black;
+    text-align: center ;
+    float: left;
+    vertical-align: middle;
+    line-height: 50px;
+}
+.main_text {
+    height: auto;
+    width: 500px;
+    margin-top: 60px;
+    float: left;
+}
+
+img {
+    float: left;
+}
